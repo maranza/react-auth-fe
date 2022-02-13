@@ -6,10 +6,13 @@ import reportWebVitals from './reportWebVitals';
 
 // import bootstrap
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { AuthContextProvider } from './store/auth-context';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <AuthContextProvider>
+      <App />
+    </AuthContextProvider>
   </React.StrictMode>,
   document.getElementById('root')
 );
